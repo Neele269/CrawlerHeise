@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 import time
-from .CrawledArticle import CrawledArticle
+from collections import namedtuple
 
 
 class ArticleFetcher:
@@ -78,11 +78,14 @@ class ArticleFetcher:
                         count_comments = "Keine Anzahl der Kommentare vorhanden!"
                     # print(count_comments)
 
-                    crawled = CrawledArticle(title, content, image, author, data, count_comments)
+                    Article = namedtuple('Article', 'title, content, image, author, data, count_comments')
+                    crawled = Article(title, content, image, author, data, count_comments)
+                    print(crawled)
                     self.articles.append(crawled)
                     # print("\n\n\n")
                     # i += 1
                     # print(i)
+                break
             return self.articles
         except:
             print('Die URL ist falsch!')

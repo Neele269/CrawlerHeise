@@ -1,4 +1,3 @@
-__all__ = ["CrawledArticle", "ArticleFetcher"]
+__all__ = ["ArticleFetcher"]
 
-from .CrawledArticle import CrawledArticle
 from .ArticleFetcher import ArticleFetcher
