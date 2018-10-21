@@ -2,7 +2,7 @@ import csv
 import crawler
 
 
-url = "https://www.heise.de/tp/energie-und-klima/?seite=333"
+url = "https://www.heise.de/tp/energie-und-klima/"
 fetcher = crawler.ArticleFetcher(url)
 articles = fetcher.fetch()
 
