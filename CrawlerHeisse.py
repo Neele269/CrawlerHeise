@@ -95,7 +95,6 @@ class ArticleFetcher:
             if not self.next_page(self.url):  # or i >= 42*3:
                 break
 
-
         return self.articles
 
 
